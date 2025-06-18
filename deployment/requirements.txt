@@ -1,0 +1,7 @@
+streamlit==1.44
+scikit-learn
+pandas
+numpy
+imbalanced-learn
+kmodes
+openpyxl
