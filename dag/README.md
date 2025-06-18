@@ -11,16 +11,18 @@ Ini adalah proyek demo pipeline ETL (Extract, Transform, Load) menggunakan:
 
 ## 🧱 Stack Teknologi
 
+Proyek ini berjalan secara lokal menggunakan:
+
 - Docker Compose
-- Airflow (UI berjalan di port `8080`)
-- PostgreSQL (port `5432`)
-- Elasticsearch (port `9200`)
+- Apache Airflow
+- PostgreSQL
+- Elasticsearch
 
 ---
 
 ## ⚙️ Cara Menjalankan
 
-1. Pastikan **Docker Desktop** aktif
+1. Pastikan **Docker Desktop** dalam keadaan aktif
 2. Jalankan perintah berikut di terminal dari direktori utama proyek:
 
 ```bash
