@@ -48,7 +48,7 @@ Dataset yang digunakan adalah "Iranian Churn Dataset" dari UCI Machine Learning 
 * **Analisis & Pemodelan**: `Python`, `Pandas`, `NumPy`, `Scikit-learn`, `imblearn`, `kmodes`, `feature-engine`
 * **Visualisasi**: `Matplotlib`, `Seaborn`
 * **Deployment**: `Streamlit`, `Hugging Face Spaces`
-* **Serialisasi Model**: `Pickle`, `Joblib`
+* **Serialisasi Model**: `Pickle`
 
 ---
 
