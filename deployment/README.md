@@ -1,4 +1,63 @@
+## 📁 Struktur File Proyek Clusturn
+
+Aplikasi ini terdiri dari beberapa komponen utama yang saling terintegrasi, baik untuk eksplorasi data, prediksi churn, klasterisasi, maupun visualisasi dengan Streamlit.
+
 ---
+
+### 🧪 Script Utama
+
+- `eda.py`  
+  Menyediakan fitur EDA (_Exploratory Data Analysis_) untuk memahami pola dan distribusi data pelanggan.
+
+- `prediction.py`  
+  Melakukan prediksi kemungkinan churn untuk satu pelanggan berdasarkan input fitur.
+
+- `batch_prediction.py`  
+  Melakukan prediksi churn dalam jumlah besar (batch), menggunakan file CSV berisi data banyak pelanggan.
+
+- `streamlit_app.py`  
+  Merupakan titik masuk utama aplikasi Streamlit. Menyatukan semua fitur (EDA, prediksi, batch prediksi) dalam satu UI.
+
+---
+
+### 🐳 Deployment
+
+- `Dockerfile`  
+  File konfigurasi Docker untuk menjadikan aplikasi dapat dijalankan secara terisolasi dan portabel di berbagai environment.
+
+- `requirements.txt`  
+  Daftar dependensi (library Python) yang dibutuhkan untuk menjalankan aplikasi. Akan otomatis diinstal saat build Docker.
+
+---
+
+### 📦 Model Machine Learning
+
+- `churn_model.pkl`  
+  File model prediksi churn (dalam format pickle), hasil dari proses training dengan data historis pelanggan.
+
+- `kproto_bundle.pkl`  
+  File model clustering pelanggan menggunakan algoritma K-Prototypes. Berguna untuk segmentasi pelanggan.
+
+---
+
+### 🔗 Akses Aplikasi Online
+
+Aplikasi ini dapat diakses secara langsung melalui Hugging Face Spaces:  
+👉 [Clusturn on Hugging Face](https://huggingface.co/spaces/azhar-muhammad/clusturn)
+
+## 🧾 Metadata Hugging Face Spaces
+
+Bagian di bawah ini merupakan metadata yang **wajib disertakan di bagian paling atas file `README.md`** jika kamu melakukan deployment aplikasi di [Hugging Face Spaces](https://huggingface.co/spaces). Metadata ini digunakan oleh platform untuk mengatur:
+
+- Judul dan ikon aplikasi
+- Warna latar kartu aplikasi
+- SDK yang digunakan (misalnya Streamlit, Gradio, atau Docker)
+- Port aplikasi
+- Tag pencarian dan deskripsi singkat
+
+Tanpa metadata ini, aplikasi mungkin tetap berjalan, tetapi tidak akan ditampilkan dengan benar di katalog Spaces.
+
+```yaml
 title: Clusturn
 emoji: 🚀
 colorFrom: red
@@ -6,45 +65,6 @@ colorTo: red
 sdk: docker
 app_port: 8501
 tags:
-- streamlit
+  - streamlit
 pinned: false
 short_description: Streamlit template space
----
-
-# 🚀 Aplikasi Streamlit: Prediksi dan Analisis Churn Pelanggan
-
-# 🌐 Lihat versi online aplikasi kami di [Hugging Face Spaces](https://huggingface.co/spaces/azhar-muhammad/clusturn)
-
-
-# Selamat datang di dashboard interaktif kami! 🎉
-# Aplikasi ini dirancang untuk membantu tim internal dalam menganalisis perilaku pelanggan,
-# memprediksi kemungkinan churn (berhenti berlangganan), dan mengelompokkan pelanggan berdasarkan pola penggunaan.
-
-# 📁 Struktur File dalam Proyek Ini:
-
-# 🔍 eda.py
-#     Menyediakan menu utama untuk eksplorasi data (EDA), visualisasi, dan analisis awal.
-
-# 🤖 prediction.py
-#     Prediksi churn untuk satu pelanggan berdasarkan input manual fitur-fitur penting.
-
-# 📊 batch_prediction.py
-#     Prediksi churn untuk banyak pelanggan sekaligus dengan cara batch (upload file CSV).
-
-# 🎯 streamlit_app.py
-#     Aplikasi utama Streamlit yang mengatur navigasi dan menyatukan semua fitur.
-
-# 🐳 Dockerfile
-#     Konfigurasi Docker untuk menjalankan aplikasi dalam container — praktis dan portable!
-
-# 📦 requirements.txt
-#     Daftar semua dependency (library) Python yang diperlukan untuk menjalankan aplikasi ini.
-
-# 🧠 churn_model.pkl
-#     Model machine learning terlatih untuk memprediksi churn pelanggan.
-
-# 🧩 kproto_bundle.pkl
-#     Model clustering K-Prototypes untuk segmentasi pelanggan berdasarkan data kategorikal & numerik.
-
-# 💡 Gunakan aplikasi ini untuk mengambil keputusan berbasis data dan meningkatkan retensi pelanggan!
-
