@@ -7,7 +7,7 @@ Aplikasi ini terdiri dari beberapa komponen utama yang saling terintegrasi, baik
 ### 🧪 Script Utama
 
 - `eda.py`  
-  Menyediakan fitur EDA (_Exploratory Data Analysis_) untuk memahami pola dan distribusi data pelanggan.
+  Menyediakan tampilan menu utama aplikasi yang berisi pengantar, penjelasan singkat, serta navigasi ke fitur-fitur lain seperti prediksi.
 
 - `prediction.py`  
   Melakukan prediksi kemungkinan churn untuk satu pelanggan berdasarkan input fitur.
@@ -15,8 +15,8 @@ Aplikasi ini terdiri dari beberapa komponen utama yang saling terintegrasi, baik
 - `batch_prediction.py`  
   Melakukan prediksi churn dalam jumlah besar (batch), menggunakan file CSV berisi data banyak pelanggan.
 
-- `streamlit_app.py`  
-  Merupakan titik masuk utama aplikasi Streamlit. Menyatukan semua fitur (EDA, prediksi, batch prediksi) dalam satu UI.
+- `streamlit_app.py`
+  Merupakan titik masuk utama aplikasi Streamlit yang **menyatukan semua fitur** dari `eda.py`, `prediction.py`, dan `batch_prediction.py` ke dalam satu antarmuka interaktif.
 
 ---
 
