@@ -5,3 +5,4 @@ numpy
 imbalanced-learn
 kmodes
 openpyxl
+XlsxWriter
